@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import classes from "./Mailbox.module.css";
 import Inbox from "../Inbox/Inbox";
 import { Route, useHistory } from "react-router-dom";
@@ -66,7 +66,7 @@ const Mailbox = () => {
 
         <Route path="/mailbox/receiveinbox">
           <section
-            class="border border-dark"
+            className="border border-dark"
             style={{
               padding: "20px",
               marginLeft: "50px",
@@ -100,7 +100,7 @@ const Mailbox = () => {
         {/* Route to the inbox where youll find all the emails sent to you */}
         <Route path="/mailbox/inbox">
           <section
-            class="border border-dark"
+            className="border border-dark"
             style={{
               padding: "20px",
               marginLeft: "50px",
