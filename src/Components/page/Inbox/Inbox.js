@@ -27,7 +27,7 @@ const Inbox = (prop) => {
     sendRequest(
       {
         request: "patch",
-        url: `https://trialmbc-5636b-default-rtdb.firebaseio.com/${prop.type}${userMail}/${prop.mails.id}.json`,
+        url: `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/${prop.type}${userMail}/${prop.mails.id}.json`,
         data: dataObj,
         header: { "Content-type": "application/json" },
       },

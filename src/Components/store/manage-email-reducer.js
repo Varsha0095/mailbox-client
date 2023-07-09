@@ -18,7 +18,7 @@ const manageEmailSlice = createSlice({
           seen: obj[id].seen,
         });
       }
-      console.log(arr);
+      // console.log(arr);
       state.receive = arr;
     },
 

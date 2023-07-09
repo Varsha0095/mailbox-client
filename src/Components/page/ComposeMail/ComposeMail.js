@@ -52,7 +52,7 @@ const ComposeMail = () => {
         sendRequest(
           {
             request: "post",
-            url: `https://trialmbc-5636b-default-rtdb.firebaseio.com/sent${userMail}.json`,
+            url: `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/sent${userMail}.json`,
             data: dataObj,
             header: { "Content-type": "application/json" },
           },
@@ -63,7 +63,7 @@ const ComposeMail = () => {
       sendRequest(
         {
           request: "post",
-          url: `https://trialmbc-5636b-default-rtdb.firebaseio.com/receive${mail2}.json`,
+          url: `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/receive${mail2}.json`,
           data: dataObj,
           header: { "Content-type": "application/json" },
         },

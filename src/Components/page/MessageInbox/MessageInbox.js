@@ -28,7 +28,7 @@ const MessageInbox = (props) => {
     sendRequest(
       {
         request: "delete",
-        url: `https://trialmbc-5636b-default-rtdb.firebaseio.com/receive${userMail}/${arr.id}.json`,
+        url: `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/receive${userMail}/${arr.id}.json`,
         header: { "Content-type": "application/json" },
       },
       responseHandler
@@ -49,7 +49,7 @@ const MessageInbox = (props) => {
         {error && <h2>{error}</h2>}
         <Container>
           <span></span>
-          <p>Subject = {arr ? arr.subject : "loading.."}</p>
+          <p>Subject - {arr ? arr.subject : "loading.."}</p>
           <p>{arr ? arr.message : "loading.."}</p>
         </Container>
         <Button variant="danger" onClick={deleteMailHandler}>

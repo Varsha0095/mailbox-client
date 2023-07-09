@@ -6,9 +6,9 @@ export const ActionCreater = (userEmail) => {
     const fetchData = async () => {
       try {
         let res = await axios.get(
-          `https://trialmbc-5636b-default-rtdb.firebaseio.com/receive${userEmail}.json`
+          `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/receive${userEmail}.json`
         );
-        console.log(res);
+        // console.log(res);
         dispatch(manageEmailActions.setReceiveMail(res.data));
       } catch (err) {
         console.log(err);
@@ -23,7 +23,7 @@ export const ActionForSentMail = (userEmail) => {
     const fetchData = async () => {
       try {
         let res = await axios.get(
-          `https://trialmbc-5636b-default-rtdb.firebaseio.com/sent${userEmail}.json`
+          `https://mailbox-client-6cc81-default-rtdb.firebaseio.com/sent${userEmail}.json`
         );
         dispatch(manageEmailActions.setSentServerMail(res.data));
       } catch (err) {

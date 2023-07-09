@@ -3,7 +3,7 @@ import useHttp from "../Hook/useHttp";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authAction } from "../store/auth-reducer";
-import { Card, Container, Button, Form } from "react-bootstrap";
+import { Card, Button, Form } from "react-bootstrap";
 
 const Auth = () => {
   const [isLogin, setLogin] = useState(true);
@@ -61,13 +61,25 @@ const Auth = () => {
           //via the custom hook useHttp
           {
             request: "post",
-            url: "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAGhJse8ivPYpSJFsr1b7XeUsV6ogivpGI",
+            url: "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCKchaU4l-4xuN2897twFHX_kKMGWgYrQE",
             data: authObj,
             header: { "Content-Type": " application/json" },
           },
           resData
         );
+        // sendRequest(
+        //   // from here we send our data to the firebase for authentication
+        //   //via the custom hook useHttp
+        //   {
+        //     request: "post",
+        //     url: "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCKchaU4l-4xuN2897twFHX_kKMGWgYrQE",
+        //     data: authObj,
+        //     header: { "Content-Type": " application/json" },
+        //   },
+        //   resData
+        // );
       }
+
     } else {
       console.log(authObj);
       //runs when we are signing Up
@@ -95,7 +107,7 @@ const Auth = () => {
           //sending
           {
             request: "post",
-            url: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAGhJse8ivPYpSJFsr1b7XeUsV6ogivpGI",
+            url: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCKchaU4l-4xuN2897twFHX_kKMGWgYrQE",
             data: authObj,
             header: { "Content-Type": " application/json" },
           },

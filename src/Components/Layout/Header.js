@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 const Header = () => {
   const history = useHistory();
   const loggedInUser = useSelector((state) => state.auth.MailBoxId);
-  console.log(loggedInUser);
+  // console.log(loggedInUser);
 
   const bannerFunction = () => {
     history.replace("/mailbox/welcome");

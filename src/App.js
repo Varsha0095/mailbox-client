@@ -16,11 +16,11 @@ const App = () => {
   const userEmail = useSelector((state) => state.auth.MailBoxId);
 
   useEffect(() => {
-    const rel = setInterval(() => {
+    const interval = setInterval(() => {
       dispatch(ActionCreater(userEmail));
       dispatch(ActionForSentMail(userEmail));
-    }, 3000);
-    return () => clearInterval(rel);
+    }, 10000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
