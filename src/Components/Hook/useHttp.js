@@ -16,8 +16,9 @@ const useHttp = () => {
       console.log(res);
       resData(res);
     } catch (err) {
-      console.log(err);
-      setError(err.message);
+      // console.log(err);
+      // setError(err.message);
+      alert("Please create an account!")
     }
   }, []);
 
